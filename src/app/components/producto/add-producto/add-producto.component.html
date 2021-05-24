@@ -1,35 +1,35 @@
 <h3>
-    <span class="fill-remaining-space">Agregar Producto</span>
-  </h3> 
- 
-<div class="container" novalidate> 
-    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
-     
+  <span class="fill-remaining-space">Agregar Producto</span>
+</h3>
+
+<div class="container" novalidate>
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
+
     <mat-form-field class="form-element">
-        <input matInput placeholder="Nombre" formControlName="nombre">
-        <mat-error *ngIf="!formGroup.controls['nombre'].valid && formGroup.controls['nombre'].touched">
-            Nombre del producto es requerido
-        </mat-error>
+      <input matInput placeholder="Nombre" formControlName="nombre">
+      <mat-error *ngIf="!formGroup.controls['nombre'].valid && formGroup.controls['nombre'].touched">
+        Nombre del producto es requerido
+      </mat-error>
     </mat-form-field>
-       
+
     <mat-form-field class="form-element">
-        <input matInput placeholder="Descripcion" formControlName="descripcion">
-        <mat-error *ngIf="!formGroup.controls['descripcion'].valid && formGroup.controls['descripcion'].touched">
-            Descripcion de producto es requerido
-        </mat-error>
+      <input matInput placeholder="Descripcion" formControlName="descripcion">
+      <mat-error *ngIf="!formGroup.controls['descripcion'].valid && formGroup.controls['descripcion'].touched">
+        Descripcion de producto es requerido
+      </mat-error>
     </mat-form-field>
-    
+
     <mat-form-field class="form-element">
       <input matInput placeholder="Precio" formControlName="precio" type="number">
       <mat-error *ngIf="!formGroup.controls['precio'].valid && formGroup.controls['precio'].touched">
         Precio del producto es requerido
       </mat-error>
     </mat-form-field>
-    
-      <div class="form-element">
-        <button appMyCustomD mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Agregar producto</button>
-      </div>
-  
-    </form>
-  </div>
-  
+
+    <div class="form-element">
+      <button appMyCustomD mat-raised-button color="primary" type="submit" class="button"
+        [disabled]="!formGroup.valid">Agregar producto</button>
+    </div>
+
+  </form>
+</div>

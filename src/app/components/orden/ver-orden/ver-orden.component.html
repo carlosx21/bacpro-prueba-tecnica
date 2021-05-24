@@ -1,40 +1,39 @@
-<div class="container" >
-     
-    <h3>
-        <span class="fill-remaining-space">Informacion de Orden</span>
-    </h3> 
-    <form class="example-form" >
- 
-         <mat-form-field class="example-full-width">
-            <mat-label>ID</mat-label>
-            <input matInput disabled  [(ngModel)]="orden.id" name="id">
-          </mat-form-field>
-       <p>
-          <mat-form-field class="example-full-width">
-            <mat-label>Cantidad </mat-label>
-            <input matInput  disabled  [(ngModel)]="orden.cantidad" name="cantidad">
-          </mat-form-field>
-        </p>
-        <p>
-          <mat-form-field class="example-full-width">
-            <mat-label>Fecha</mat-label>
-            <input matInput disabled  [(ngModel)]="orden.fecha" name="fecha">
-          </mat-form-field>
-        </p>
-         <p>            
-              <mat-label>Producto </mat-label> <br>
-              <mat-label>{{orden.idProducto |  myCustom: 'p' }} </mat-label>                      
-        </p>
-        <p>            
-              <mat-label>Cliente </mat-label><br>
-              <mat-label>{{orden.idCliente |  myCustom: 'c' }} </mat-label>                          
-        </p>
+<div class="container">
 
-      </form>
+  <h3>
+    <span class="fill-remaining-space">Informacion de Orden</span>
+  </h3>
+  <form class="example-form">
+
+    <mat-form-field class="example-full-width">
+      <mat-label>ID</mat-label>
+      <input matInput disabled [(ngModel)]="orden.id" name="id">
+    </mat-form-field>
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Cantidad </mat-label>
+        <input matInput disabled [(ngModel)]="orden.cantidad" name="cantidad">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Fecha</mat-label>
+        <input matInput disabled [(ngModel)]="orden.fecha" name="fecha">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-label>Producto </mat-label> <br>
+      <mat-label>{{orden.idProducto | myCustom: 'p' }} </mat-label>
+    </p>
+    <p>
+      <mat-label>Cliente </mat-label><br>
+      <mat-label>{{orden.idCliente | myCustom: 'c' }} </mat-label>
+    </p>
+
+  </form>
 </div>
 
-<button mat-icon-button color="primary" aria-label="eye icon" [routerLink]="['/mi-tienda/ordenes/' ]"  >
-    <mat-icon aria-hidden="false"  aria-label="eye icon">arrow_back</mat-icon>
-    Regresar a Ordenes
-</button>  
-
+<button mat-icon-button color="primary" aria-label="eye icon" [routerLink]="['/mi-tienda/ordenes/' ]">
+  <mat-icon aria-hidden="false" aria-label="eye icon">arrow_back</mat-icon>
+  Regresar a Ordenes
+</button>

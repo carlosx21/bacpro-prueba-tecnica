@@ -1,44 +1,52 @@
-<div class="container" >
-     
-    <h3>
-        <span class="fill-remaining-space">Informacion de Cliente</span>
-    </h3> 
-    <form class="example-form">
- 
-         <mat-form-field class="example-full-width">
-            <mat-label>ID</mat-label>
-            <input matInput disabled  [(ngModel)]="cliente.id" name="id">
-          </mat-form-field>
+<div class="container">
 
+  <h3>
+    <span class="fill-remaining-space">Informacion de Cliente</span>
+  </h3>
+  <form class="example-form">
+
+    <mat-form-field class="example-full-width">
+      <mat-label>ID</mat-label>
+      <input matInput disabled [(ngModel)]="cliente.id" name="id">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombres</mat-label>
+      <input matInput disabled [(ngModel)]="cliente.nombres" name="nombres">
+    </mat-form-field>
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Apellidos</mat-label>
+        <input matInput disabled [(ngModel)]="cliente.apellidos" name="apellidos">
+      </mat-form-field>
+    </p>
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
           <mat-form-field class="example-full-width">
-            <mat-label>Nombres</mat-label>
-            <input matInput  disabled  [(ngModel)]="cliente.nombres" name="nombres">
-          </mat-form-field>
-        <p>
-          <mat-form-field class="example-full-width">
-            <mat-label>Apellidos</mat-label>
-            <input matInput disabled  [(ngModel)]="cliente.apellidos" name="apellidos">
-          </mat-form-field>
-        </p>
-      
-        <table class="example-full-width" cellspacing="0"><tr>
-          <td><mat-form-field class="example-full-width">
             <mat-label>Telefono</mat-label>
-            <input matInput disabled  [(ngModel)]="cliente.telefono" name="telefono">
-          </mat-form-field></td>
-          <td><mat-form-field class="example-full-width">
+            <input matInput disabled [(ngModel)]="cliente.telefono" name="telefono">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
             <mat-label>NIT</mat-label>
-            <input matInput disabled  [(ngModel)]="cliente.nit" name="nit">
-          </mat-form-field></td>
-          <td><mat-form-field class="example-full-width">
+            <input matInput disabled [(ngModel)]="cliente.nit" name="nit">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
             <mat-label>Correo</mat-label>
-            <input matInput disabled  [(ngModel)]="cliente.correo" name="correo">
-          </mat-form-field></td>
-        </tr></table>
-      </form>
+            <input matInput disabled [(ngModel)]="cliente.correo" name="correo">
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+  </form>
 </div>
 
-<button mat-icon-button color="primary" aria-label="eye icon" [routerLink]="['/mi-tienda/clientes/' ]"  >
-    <mat-icon aria-hidden="false"  aria-label="eye icon">arrow_back</mat-icon>
-    Regresar a Clientes
-</button>  
+<button mat-icon-button color="primary" aria-label="eye icon" [routerLink]="['/mi-tienda/clientes/' ]">
+  <mat-icon aria-hidden="false" aria-label="eye icon">arrow_back</mat-icon>
+  Regresar a Clientes
+</button>
