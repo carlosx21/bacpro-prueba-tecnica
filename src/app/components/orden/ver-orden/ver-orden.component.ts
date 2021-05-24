@@ -29,7 +29,7 @@ export class VerOrdenComponent implements OnInit {
         this.apiService.getOrden(params['id'])
           .subscribe(resp => {
               console.log(resp);               
-              this.orden =resp[0] ;         
+              this.orden =resp ;         
         });
     })
   }

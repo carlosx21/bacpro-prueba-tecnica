@@ -53,7 +53,7 @@ export class ApiExampleService {
    }
 
    getOrden(id: number) {
-    return this.http.get<Orden[]>(`${this.url}/ordenes?idOrden=${id}`);
+    return this.http.get<Orden>(`${this.url}/ordenes/${id}`);
    }
 
    addOrden( orden: Orden){
