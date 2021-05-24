@@ -1,0 +1,38 @@
+<div class="container" >
+     
+    <h3>
+        <span class="fill-remaining-space">Informacion de Producto</span>
+    </h3> 
+    <form class="example-form" >
+ 
+         <mat-form-field class="example-full-width">
+            <mat-label>ID</mat-label>
+            <input matInput disabled  [(ngModel)]="producto.id" name="id">
+          </mat-form-field>
+       <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Nombre </mat-label>
+            <input matInput  disabled  [(ngModel)]="producto.nombre" name="nombre">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Descripcion</mat-label>
+            <input matInput disabled  [(ngModel)]="producto.descripcion" name="descripcion">
+          </mat-form-field>
+        </p>
+         <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Precio </mat-label>
+              <input matInput disabled  [(ngModel)]="producto.precio" name="precio">
+            </mat-form-field>
+        </p>
+
+      </form>
+</div>
+
+<button mat-icon-button color="primary" aria-label="eye icon" [routerLink]="['/mi-tienda/productos/' ]"  >
+    <mat-icon aria-hidden="false"  aria-label="eye icon">arrow_back</mat-icon>
+    Regresar a Productos
+</button>  
+
